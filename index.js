@@ -21,8 +21,6 @@ app.get('/password', (req, res) => {
         uppercase: !(options.uppercase === 'false'),
         lowercase: !(options.lowercase === 'false')
     }
-
-    console.log(parsedOptions)
     let password = generate(parsedOptions);
     return res.json(password)
 });
